@@ -15,30 +15,28 @@ const RoutePush = props => (
   />
 );
 
-const BtnNav = props => (
-  <BrowserRouter>
-    
-      {props.btnInfo.map(btnInfo => {
-        return <LinkPush btnInfo={btnInfo} />;
+const BtnNav = props => (   
+  <div>
+    {props.btnInfo.map((btnInfo, index) => {
+      return <LinkPush key={index} btnInfo={btnInfo} />;
+    })}
+    <Switch>
+      {props.btnInfo.map((btnInfo, index) => {
+        return <RoutePush key={index} btnInfo={btnInfo} />;
       })}
-      {props.btnInfo.map(btnInfo => {
-        return <RoutePush btnInfo={btnInfo} />;
-      })}
-  
-  </BrowserRouter>
+    </Switch>
+  </div>
 );
 
 export default () => {
-  
-    return (
-      <BtnNav
-        btnInfo={[
-          { text: "Home", path: "/", funName: "name" },
-          { text: "Trend", path: "trend", funName: "name" },
-          { text: "Upload", path: "upload", funName: "name" },
-          { text: "Search", path: "search", funName: "name" }
-        ]}
-      />
-    );
-  
-}
+  return (
+    <BtnNav
+      btnInfo={[
+        { text: "Home", path: "/", funName: "name" },
+        { text: "Trend", path: "trend", funName: "name" },
+        { text: "Upload", path: "upload", funName: "name" },
+        { text: "Search", path: "search", funName: "name" }
+      ]}
+    />
+  );
+};
