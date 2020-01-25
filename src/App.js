@@ -1,13 +1,18 @@
 import React from "react";
 import Nav from "./component/Nav";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Root from "./Root";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <Nav/>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Nav/>
+          <Root/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
