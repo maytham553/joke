@@ -20,7 +20,7 @@ export default class TemplatesPage extends React.Component {
   }
 
   render() {
-    if (this.state.loading) return <h1>Loding...</h1>;
+    if (this.state.loading) return <h1>Loading...</h1>;
     if (this.state.error) return <h1>Error</h1>;
     return <PostList posts={this.state.posts} />;
   }

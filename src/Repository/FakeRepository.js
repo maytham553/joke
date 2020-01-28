@@ -5,16 +5,12 @@ export default class FakeRepository {
     getRecentPosts() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                const random = Math.random();
-                if (random > 0.7)
-                    reject();
-                else
                     resolve(posts);
             }, 1500);
         });
     }
 
-    getTrendinPosts() {
+    getTrendingPosts() {
         return new Promise((resolve, reject) => {
             const trendingPosts = posts.filter(post => post.isTrend);
             setTimeout(() => {
