@@ -54,8 +54,8 @@ const Templates = [
 
 const posts = [
     {
-        text: 'Hello', image: '/test1.jpg', likes: 10, author: {
-            name: 'Ali', url: 'http://google.com'
+        text: 'وهذه النسبة تتضاءل أكثر عند البحث في أمور تقنية رقمية، فالحقيقية الواضحة للجميع هي أن لا أحد منا كمبرمجين يستعمل العربية في البحث على الإنترنت وهذا راجع لامحالة إلى انعدام الثقة في ال', image: '/test1.jpg', likes: 10, author: {
+            name: 'علي حسين اسامة', url: 'http://google.com'
         }, id: 4, tags: ['A', 'B'], isTrend: true
     },
     {

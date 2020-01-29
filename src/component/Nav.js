@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <div className="bg-yellow-100   text-white bg-center text-right min-w-full  flex justify-around text-sm font-bold pl-6">
-      <div className="text-orange-300 pr-3">iconnn</div>
-      <Link className="" to="/upload">
+    <div
+      className=" hover:bg-yellow-800  nav "
+    >
+      <div className="text-orange-300">iconnn</div>
+      <Link className=" " to="/upload">
         UPLOAD
       </Link>
-      <Link className="" to="/find">
+      <Link className="hover:bg-yellow-700" to="/find">
         FIND
       </Link>
       <Link className="" to="/template">
