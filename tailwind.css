@@ -2,11 +2,11 @@
 
 @tailwind components;
 
-.nav {
-    @apply bg-yellow-100 text-xs text-white bg-center text-right items-center fixed bg-fixed flex justify-around font-bold h-10 inset-0 overflow-hidden
+.nav:hover {
+    @apply  bg-yellow-100 rounded-none w-screen text-xs text-white bg-center text-right items-center fixed bg-fixed flex justify-around font-bold h-10 top-0 right-0 overflow-hidden m-0
 }
-.nav_hover{
-    @apply w-12 rounded-b-full  overflow-hidden bg-yellow-100 fixed top-0 right-0 mr-3 text-6xl h-12
+.nav{
+    @apply bg-yellow-100 w-12 rounded-b-full fixed  overflow-hidden  top-0 right-0 mr-3
 }
 
 @tailwind utilities;

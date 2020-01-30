@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <div
-      className=" hover:bg-yellow-800  nav "
+      className=" nav  nav_hover transition-w transition-500"
     >
       <div className="text-orange-300">iconnn</div>
       <Link className=" " to="/upload">

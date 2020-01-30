@@ -623,8 +623,10 @@ video {
   }
 }
 
-.nav {
+.nav:hover {
   background-color: #F2BC1B;
+  border-radius: 0;
+  width: 100vw;
   font-size: 0.75rem;
   color: #fff;
   background-position: center;
@@ -640,23 +642,20 @@ video {
   height: 2.5rem;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden
+  overflow: hidden;
+  margin: 0
 }
 
-.nav_hover{
+.nav{
+  background-color: #F2BC1B;
   width: 3rem;
   border-bottom-right-radius: 9999px;
   border-bottom-left-radius: 9999px;
-  overflow: hidden;
-  background-color: #F2BC1B;
   position: fixed;
+  overflow: hidden;
   top: 0;
   right: 0;
-  margin-right: 0.75rem;
-  font-size: 4rem;
-  height: 3rem
+  margin-right: 0.75rem
 }
 
 .sr-only {

@@ -12,6 +12,9 @@ class App extends React.Component {
         <div className="App ">
           <Nav/>
           <Root/>
+          <button class="bg-gray-200 hover:bg-gray-900 text-gray-900 hover:text-gray-200 transition-colors transition-500 transition-linear">
+  Hover me to invert colors
+</button>
         </div>
       </BrowserRouter>
     );
