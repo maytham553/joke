@@ -5,12 +5,9 @@ export default class FakeRepository {
     getRecentPosts() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                const random = Math.random();
-                if (random > 0.7)
-                    reject();
-                else
+                
                     resolve(posts);
-            }, 1500);
+            },);
         });
     }
 
@@ -58,17 +55,17 @@ const Templates = [
 
 const posts = [
     {
-        text: 'Hello', image: '/test1.jpg', likes: 10, author: {
-            name: 'Ali', url: 'http://google.com'
-        }, id: 4, tags: ['A', 'B'], isTrend: true
+        text: 'دكتور شغل اغاني للمجانين، الكل رقص ماعدا واحد، ساله الدكتور ليه مش بترقص معاهم قال: اسكت اسكت انا العريس', image: '/test1.jpg', likes: 10, author: {
+            name: 'علي الخفاجي', url: 'http://google.com'
+        }, id: 4, tags: ['#ههه', '#افلام'], isTrend: true
     },
     {
-        text: 'Hello', image: '/test2.png', likes: 10, author: {
+        text: ' للمجانين، الكل رقص ماعدا واحد، ساله الدكتور ليه مش بترقص معاهم قال: اسكت اسكت انا ا', image: '/test2.png', likes: 10, author: {
             name: 'Ali', url: 'http://google.com'
         }, id: 5, tags: ['A', 'B'], isTrend: false
     },
     {
-        text: 'Hello', image: '/test3.jpg', likes: 10, author: {
+        text: 'كتور شغل اغاني للمجانين، الكل رقص ماعدا واحد، ساله الدكتور ليه مش بترقص معاهم قال: اسكت', image: '/test3.jpg', likes: 10, author: {
             name: 'Ali', url: 'http://google.com'
         }, id: 6, tags: ['A', 'B'], isTrend: true
     } ]
