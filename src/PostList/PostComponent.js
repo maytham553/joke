@@ -24,12 +24,10 @@ export default class PostComponent extends Component {
             ))}
           </div>
           <div className="like_continuer">
-          <span className="likes-count">
-            {post.likes}</span>
-          <input id="toggle-heart" type="checkbox" />
-          <label for="toggle-heart">❤</label>
+            <span className="likes-count">{post.likes}</span>
+            <input className="toggle-heart" id="toggle-heart" type="checkbox" />
+            <label htmlFor="toggle-heart">❤</label>
           </div>
-
         </div>
       </div>
     );

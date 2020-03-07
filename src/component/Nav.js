@@ -1,30 +1,73 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function navStyle() {
-  var x = document.getElementById("nav");
-  var y = document.getElementById("nav_btn")
-  console.log(x)
-  if (x.className === "nav" && y.className=== "ion-md-close") {
-    x.className = "nav_ball";
-    y.className = "ion-ios-reorder";
-  } else {
-    x.className = "nav";
-    y.className = "ion-md-close";
+export default class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: " " };
   }
-  console.log(x)
-}
+  pageName = Name => {
+    this.setState({ name: Name });
+    console.log(this.state);
+  };
+  onSearch = () => {
+    let searchText = document.getElementById("search");
+    if (searchText.className === "search-text") {
+      searchText.className = "search-mode";
+    }
+  };
+  offSearch = () => {
+    let searchText = document.getElementById("search");
+    if (searchText.className === "search-mode") {
+      searchText.className = "search-text";
+    }
+  };
 
+  render() {
+    return (
+      <div id="nav">
+        <div className="top-nav nav">
+          <form>
+            <input
+              id={"search"}
+              className="search-text"
+              placeholder="بحث"
+              onClick={() => (this.pageName(" "), this.onSearch())}
+            ></input>
+          </form>
+          <a className="page-name" href="#">
+            {this.state.name}
+          </a>
+        </div>
 
-export default function Nav() {
-  return <div className="nav_ball" id="nav">
-    
-    <Link to='/'>HOME</Link>
-    <Link to='/trending'>TRENDING</Link>
-    <Link to='/template'>TEMPLATES</Link>
-    <Link to='/find'>FIND</Link>
-    <Link to='/upload'>UPLOAD</Link>
-    <a className="icon ion-ios-reorder " id="nav_btn" onClick={navStyle}>
-</a>
-  </div>
+        <div className="bottom-nav nav">
+          <Link
+            to="/"
+            className={"ion-md-home"}
+            onClick={() => (this.pageName("الرئيسية"), this.offSearch())}
+          ></Link>
+          <Link
+            to="/trending"
+            className={"ion-ios-trending-up"}
+            onClick={() => (this.pageName("ترند"), this.offSearch())}
+          ></Link>
+          <Link
+            to="/template"
+            className={"ion-ios-image"}
+            onClick={() => (this.pageName("تيمبلت"), this.offSearch())}
+          ></Link>
+          <Link
+            to="/search"
+            className={"ion-ios-search"}
+            onClick={() => (this.pageName(" "), this.onSearch())}
+          ></Link>
+          <Link
+            to="/upload"
+            className={"ion-md-add"}
+            onClick={() => (this.pageName("اضافة"), this.offSearch())}
+          ></Link>
+        </div>
+      </div>
+    );
+  }
 }

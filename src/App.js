@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 import Nav from "./component/Nav";
 import "./App.css";
 import Root from "./Root";
@@ -10,7 +10,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="App">
           <Nav/>
-            <Root />
+           <Root />
         </div>
       </BrowserRouter>
     );
