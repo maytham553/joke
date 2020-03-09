@@ -8,6 +8,7 @@ export default class PostComponent extends Component {
         <div className="above_section">
           <div className="post_text">{post.text && <h3>{post.text}</h3>}</div>
           <div className="author_name">
+     
             {post.author && (
               <a href={post.author.profileUrl} target="_blank">
                 {post.author.name}
@@ -27,6 +28,14 @@ export default class PostComponent extends Component {
             <span className="likes-count">{post.likes}</span>
             <input className="toggle-heart" id="toggle-heart" type="checkbox" />
             <label htmlFor="toggle-heart">❤</label>
+          </div>
+
+        </div>
+        <div >
+          
+          <div className="text-right ">
+            <span >{post.likes}</span>
+            <button className="pl-3" >LIKE</button>
           </div>
         </div>
       </div>

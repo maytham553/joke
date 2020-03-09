@@ -11,7 +11,7 @@ export default class FakeRepository {
         });
     }
 
-    getTrendinPosts() {
+    getTrendingPosts() {
         return new Promise((resolve, reject) => {
             const trendingPosts = posts.filter(post => post.isTrend);
             setTimeout(() => {
@@ -55,9 +55,15 @@ const Templates = [
 
 const posts = [
     {
+<<<<<<< HEAD
         text: 'دكتور شغل اغاني للمجانين، الكل رقص ماعدا واحد، ساله الدكتور ليه مش بترقص معاهم قال: اسكت اسكت انا العريس', image: '/test1.jpg', likes: 10, author: {
             name: 'علي الخفاجي', url: 'http://google.com'
         }, id: 4, tags: ['#ههه', '#افلام'], isTrend: true
+=======
+        text: 'وهذه النسبة تتضاءل أكثر عند البحث في أمور تقنية رقمية، فالحقيقية الواضحة للجميع هي أن لا أحد منا كمبرمجين يستعمل العربية في البحث على الإنترنت وهذا راجع لامحالة إلى انعدام الثقة في ال', image: '/test1.jpg', likes: 10, author: {
+            name: 'علي حسين اسامة', url: 'http://google.com'
+        }, id: 4, tags: ['A', 'B'], isTrend: true
+>>>>>>> 5a991861c59f556acf090d9709c4f85aa88f4dbc
     },
     {
         text: ' للمجانين، الكل رقص ماعدا واحد، ساله الدكتور ليه مش بترقص معاهم قال: اسكت اسكت انا ا', image: '/test2.png', likes: 10, author: {

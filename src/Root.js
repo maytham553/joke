@@ -16,7 +16,7 @@ export default class Root extends React.Component {
             <Route path='/template' exact component={TemplatesPage} />
             <Route path='/search' exact component={Find} />
             <Route path='/upload' exact component={Upload} />
-            <Route component={() => <h1>404 NOT FOUND</h1>} />
+            <Route component={() => <h1>404 NOT FOUND</h1>} /> 
         </Switch>
     }
 

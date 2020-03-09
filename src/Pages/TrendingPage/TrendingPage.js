@@ -10,7 +10,7 @@ export default class TrendingPage extends React.Component {
     async componentDidMount() {
     const repo = new FakeRepository();
     try {
-      const posts = await repo.getTrendinPosts();
+      const posts = await repo.getTrendingPosts();
       this.setState({ error: false, loading: false, posts: posts });
     } catch {
       this.setState({ error: true, loading: false, posts: [] });
