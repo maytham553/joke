@@ -8,18 +8,21 @@ export default class Nav extends React.Component {
   }
   pageName = Name => {
     this.setState({ name: Name });
-    console.log(this.state);
   };
   onSearch = () => {
     let searchText = document.getElementById("search");
+    let pageName = document.getElementById("page-name");
     if (searchText.className === "search-text") {
       searchText.className = "search-mode";
+      pageName.style.opacity = "0"
     }
   };
   offSearch = () => {
     let searchText = document.getElementById("search");
+    let pageName = document.getElementById("page-name");
     if (searchText.className === "search-mode") {
       searchText.className = "search-text";
+      pageName.style.opacity = "100";
     }
   };
 
@@ -35,7 +38,7 @@ export default class Nav extends React.Component {
               onClick={() => (this.pageName(" "), this.onSearch())}
             ></input>
           </form>
-          <a className="page-name" href="#">
+          <a className="page-name" id="page-name" href="#">
             {this.state.name}
           </a>
         </div>

@@ -80,20 +80,21 @@ html {
   font-size: 1rem;
   height: 1.7rem;
   padding-right: .5rem;
+  transition: all 0.4s;
 }
 .search-text{
   width: 30vw ;
   border-radius: 1rem ;
-  transition: all 0.4s;
 }
 .search-mode{
   margin-top: .2rem;
   width: 90vw ;
   border-radius: .7rem ;
-  transition: all 0.4s;
 }
 .page-name{
   color:#2a7886 !important ;
+  font-weight:600;
+  font-size: 2rem ;;
 }
 
 
