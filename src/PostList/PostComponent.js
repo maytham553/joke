@@ -29,14 +29,10 @@ export default class PostComponent extends Component {
             <input className="toggle-heart" id="toggle-heart" type="checkbox" />
             <label htmlFor="toggle-heart">❤</label>
           </div>
-
         </div>
         <div >
           
-          <div className="text-right ">
-            <span >{post.likes}</span>
-            <button className="pl-3" >LIKE</button>
-          </div>
+          
         </div>
       </div>
     );
