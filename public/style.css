@@ -12,8 +12,8 @@ h3 {
   background-color: #ffffff;
   font: inherit;
 }
-  ::-webkit-scrollbar {
-  -ms-overflow-style: none;
+body{
+    margin: 4rem 0 4rem  0 ;
 }
 h1 {
   padding-top: 3rem;
@@ -27,7 +27,13 @@ a {
 html {
   width: 100vw;
 }
-
+input,
+textarea {
+    background-color: #f1f3f4;
+    outline: none !important;
+    border: none ;
+    border-radius: 1rem ;
+}
 /* ........... nav.js style ................ */
 
 .nav {
@@ -71,12 +77,10 @@ html {
   transform: scale(1.25);
   color: #79bac1 !important;
 }
+
 #search{
-  background-color: #f1f3f4;
-  height: 90%;
   text-align: right !important;
-  border: none ;
-  outline: none !important;
+  height: 90%;
   font-size: 1rem;
   height: 1.7rem;
   padding-right: .5rem;
@@ -84,8 +88,8 @@ html {
 }
 .search-text{
   width: 30vw ;
-  border-radius: 1rem ;
 }
+
 .search-mode{
   margin-top: .2rem;
   width: 90vw ;
@@ -100,20 +104,18 @@ html {
 
 /* ...........postList style ................ */
 .post_img {
-  min-width: 100vw;
-  height: 75vw;
+  width: 20rem;
+  height: 20rem;
+  object-fit:scale-down;
 }
 .post-list {
   width: 100vw;
   text-align: center;
-  margin-top: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.post-item:first-child {
-  margin-top: 3rem;
-}
+
 .post-item:not(:first-child) {
   margin-top: 2rem;
 }
@@ -316,3 +318,66 @@ html {
       -1.81501rem -1.03204rem 0 0rem #ff8080;
   }
 }
+
+/*.................................page of upload .............................*/
+/*.................................page of upload .............................*/
+/*.................................page of upload .............................*/
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-top: 5rem;
+}
+.upload *{
+    margin-bottom: 1rem ;
+    height: 2rem;
+    padding-right: .8rem;
+}
+.btn-uploads{
+    width: 30vw;
+    text-align: center;
+}
+.image-upload{
+    text-align: center;
+    width: 70vw;
+    position: relative;
+}
+
+.image-upload:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;    
+    background-color: #f1f3f4;
+    width: 100%;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 2;
+    content: "أختيار الصورة";
+ }
+
+.input-text{
+    width: 50vw;
+    text-align: right;
+    transition: all .5s;
+}
+
+.input-text:focus{
+    width: 70vw;
+    border: 1px solid #79bac1 ; 
+}
+.paragraph:focus{
+    height: 6rem;
+} 
+.image{
+ padding: 0;
+ height: 35vh;
+ width: 70vw;
+ object-fit:scale-down;
+ background-color: #f1f3f4;
+
+}
+
